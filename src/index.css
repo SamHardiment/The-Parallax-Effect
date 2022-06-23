@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 300vh;
+  overflow-x: hidden;
+}
+
+.parallaxBanner {
+  aspect-ratio: 2 / 1;
+  height: 100vh;
+}
+
+.hero-container {
+  position: absolute;
+  inset: 30% 0;
+  display: flex;
+  justify-content: center;
+  justify-items: centers;
+}
+
+.hero-title {
+  font-size: 36px;
+  color: white;
+  font-weight: 300;
+}
+.color-transition {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100vw;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(7, 7, 7, 0.6),
+    rgba(0, 0, 0, 0.8)
+  );
+}

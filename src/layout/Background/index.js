@@ -4,7 +4,7 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import hero from "../../images/hero.jpg";
 import laptop from "../../images/laptop.jpg";
 import street from "../../images/bottom-street.jpg";
-import { Spinner } from "../../components";
+import { Spinner, Content } from "../../components";
 import "../../index.css";
 export const Background = () => {
   return (
@@ -42,14 +42,16 @@ export const Background = () => {
       ></ParallaxBanner>
       <ParallaxBanner
         className="parallaxBanner"
-        layers={[
-          { image: laptop, speed: -10, translateY: [0, 20] },
-          { children: <Spinner /> },
-        ]}
-      ></ParallaxBanner>
+        layers={[{ image: laptop, speed: -10, translateY: [0, 20] }]}
+      >
+        <Spinner />
+      </ParallaxBanner>
       <ParallaxBanner
         className="parallaxBanner"
-        layers={[{ image: street, speed: -10, translateY: [0, 10] }]}
+        layers={[
+          { image: street, speed: -10, translateY: [0, 10] },
+          { children: <Content /> },
+        ]}
       ></ParallaxBanner>
     </>
   );
